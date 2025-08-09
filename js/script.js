@@ -52,6 +52,12 @@ const translations = {
         email_us: "Email Us",
         description: "This is a bilingual website example.",
         dir: "ltr",
+        select_service:"Choose Offer",
+        select_time: "Choose Time",
+        send_message: "Book Now",                       
+        book_your_appointment: "Book Your Appointment",
+        book_your_appointment_description: "Book your appointment today for expert dental care tailored to your needs. Healthy, beautiful smiles start with a simple step, schedule now!",
+        pages: "Pages",
         happy_patients: "Happy Patients",
         teeth_whitened: "Teeth Whitened",
         dental_implants: "Dental Implants",
@@ -86,6 +92,10 @@ const translations = {
         question_answer_5: "Yes, when performed by a dental professional, teeth whitening is safe and effective with long-lasting results.",
         contact_us: "Contact Us",
         send_message: "Send Message",
+        message: "Message",
+        name: "Name",
+        phone: "Phone",
+        select_date: "Select Date",
         clinic_location: "Clinic Location",
         call_us: "Call Us",
         logo_description: "At Dentia, we’re dedicated to providing high-quality, personalized dental care for patients of all ages. Our skilled team uses the latest technology to ensure comfortable, efficient treatments and beautiful, healthy smiles for life.",
@@ -136,6 +146,9 @@ const translations = {
         email_us: "راسلنا",
         description: "هذا مثال على موقع ثنائي اللغة.",
         dir: "rtl",
+        book_your_appointment: "احجز موعدك",
+        book_your_appointment_description: "احجز موعدك اليوم للحصول على رعاية أسنان متخصصة تناسب احتياجاتك. الابتسامات الصحية والجميلة تبدأ بخطوة بسيطة، احجز الآن!",
+        pages: "الصفحات",
         happy_patients: "المرضى السعداء",
         teeth_whitened: "أسنان مبيضة",
         dental_implants: "زراعة الأسنان",
@@ -175,7 +188,13 @@ const translations = {
         testimonials: "الشهادات",
         testimonials_title: "عملاؤنا السعداء",
         testimonials_description: "انضم إلى آلاف المرضى السعداء الذين يثقون بنا لرعاية لطيفة وخبيرة وابتسامات جميلة. تجربتك المثالية في طب الأسنان تبدأ هنا!",
-        send_message: "أرسل رسالة",
+        send_message: "إحجز الان",
+        name: "الاسم",
+        phone: "الهاتف",
+        message: "الرسالة",
+        select_service: "اختر العرض",
+        select_time: "اختر الوقت",
+        select_date: "اختر تاريخ",
     }
 };
 
@@ -185,15 +204,40 @@ let currentLanguge = localStorage.getItem('language') || 'ar';
 let dir = localStorage.getItem('direction') || 'rtl';
 
 // Function to update all translatable elements
-	function updateTranslations() {
-		const elements = Array.from(document.querySelectorAll('[data-i18n]')).filter(el => el.offsetParent !== null);
-		elements.forEach((element) => {
-			const key = element.getAttribute('data-i18n');
-			if (key && translations[currentLanguge][key]) {
-				element.textContent = translations[currentLanguge][key];
-			}
-		});
-	}
+// function updateTranslations() {
+//     const elements = Array.from(document.querySelectorAll('[data-i18n]')).filter(el => el.offsetParent !== null);
+//     elements.forEach((element) => {
+//         const key = element.getAttribute('data-i18n');
+//         if (key && translations[currentLanguge][key]) {
+//             element.textContent = translations[currentLanguge][key];
+//         }
+//     });
+// }
+
+function updateTranslations() {
+    const elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (key && translations[currentLanguge][key]) {
+            const translatedText = translations[currentLanguge][key];
+
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                if (element.placeholder) {
+                    element.placeholder = translatedText;
+                } else {
+                    element.value = translatedText;
+                }
+            } else if (element.tagName === 'OPTION') {
+                element.textContent = translatedText;
+                element.value = translatedText; // optional
+            } else {
+                element.textContent = translatedText;
+            }
+        }
+    });
+}
+    
 
 languageBtn.addEventListener('click', (e) => {
     e.preventDefault();

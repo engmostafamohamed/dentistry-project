@@ -2871,12 +2871,10 @@ footer:not(.footer-light) #form_subscribe.form-dark input[type="text"] {
   margin: 0;
   padding: 0;
   font-weight: 500;
-}
-
-.crumb {
   font-size: 16px;
   padding-top: 10px;
   margin-bottom: -50px;
+  list-style: none;
 }
 
 .crumb li {
@@ -2887,26 +2885,31 @@ footer:not(.footer-light) #form_subscribe.form-dark input[type="text"] {
 
 .crumb li:after {
   font-family: "FontAwesome";
-  content: "\f054";
+  content: "\f054"; /* right arrow */
   font-size: 10px;
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
   color: var(--primary-color);
-}
-
-.crumb li:not(li.active):before {
-  font-family: "FontAwesome";
-  content: "\f104";
-  font-size: 15px;
-  margin: 0 10px 0 10px;
-  color: var(--primary-color);
-}
-
-[dir = rtl] .crumb li:after{
-  display: none;
 }
 
 .crumb li:last-child:after {
   display: none;
+}
+
+/* RTL adjustments */
+html[dir="rtl"] .crumb li:after {
+  display: none; /* hide LTR arrow */
+}
+
+html[dir="rtl"] .crumb li:before {
+  font-family: "FontAwesome";
+  content: "\f053"; /* left arrow */
+  font-size: 10px;
+  margin: 0 10px;
+  color: var(--primary-color);
+}
+
+html[dir="rtl"] .crumb li:first-child:before {
+  display: none; /* no arrow before first in RTL */
 }
 
 .crumb a {
@@ -2923,9 +2926,6 @@ footer:not(.footer-light) #form_subscribe.form-dark input[type="text"] {
   font-weight: 600;
 }
 
-.de_light .crumb a:hover {
-  color: #fff;
-}
 
 /* button and link */
 /* ------------------------------ */
