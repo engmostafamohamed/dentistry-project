@@ -701,6 +701,9 @@ header.header-float.header-light .header-inner {
   text-align: right;
 }
 
+[dir=rtl] .quote-icon {
+  inset-inline-start: 18rem;
+}
 #subheader.s2 h1,
 #subheader.s2 .crumb {
   margin: 0;
@@ -5077,6 +5080,10 @@ html[dir=rtl] .accordion-section-title:before {
 
 .dark-scheme .de_tab.tab_simple .de_nav li span {
   color: rgba(255, 255, 255, 0.5);
+}
+
+[dir=ltr] #what-up {
+  left: 50px;
 }
 
 .rtl .de_tab.tab_simple .de_nav li span {
@@ -12233,7 +12240,7 @@ a.read_more i {
 [dir=rtl] .ul-check li:before {
   right: 0;
   margin-left: 12px;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 }
 
 [dir=ltr] .ul-check li:before {
