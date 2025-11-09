@@ -48,77 +48,164 @@
       <!-- preloader end -->
 
         <!-- header begin -->
-        <header class="transparent header-light">
+        <header class="transparent header-light header-float">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="de-flex sm-pt10">
-                            <div class="de-flex-col">
-                                <!-- logo begin -->
-                                <div id="logo">
-                                    <a href="index.html">
-                                        <img class="logo-main" src="images/logo-black.webp" alt="" >
-                                        <img class="logo-scroll" src="images/logo-black.webp" alt="" >
-                                        <img class="logo-mobile" src="images/logo-black.webp" alt="" >
-                                    </a>
-                                </div>
-                                <!-- logo end -->
-                            </div>
-                            <div class="de-flex-col header-col-mid">
-                                <!-- mainemenu begin -->
-                                <ul id="mainmenu">
-                                    <li><a class="menu-item" href="index.html">Home</a>
-                                        <!-- <ul>
-                                            <li><a href="index.html">Homepage 1</a></li>
-                                            <li><a href="homepage-2.html">Homepage 2</a></li>
-                                            <li><a href="homepage-3.html">Homepage 3</a></li>
-                                            <li><a href="homepage-4.html">Homepage 4</a></li>
-                                            <li><a href="homepage-5.html">Homepage 5</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li><a class="menu-item" href="services.html">Services</a>
-                                        <ul>
-                                            <li><a class="menu-item" href="service-general-dentistry.html">General Dentistry</a></li>
-                                            <li><a class="menu-item" href="service-cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
-                                            <li><a class="menu-item" href="service-pediatric-dentistry.html">Pediatric Dentistry</a></li>
-                                            <li><a class="menu-item" href="service-restorative-dentistry.html">Restorative Dentistry</a></li>
-                                            <li><a class="menu-item" href="service-preventive-dentistry.html">Preventive Dentistry</a></li>
-                                            <li><a class="menu-item" href="service-orthodontics.html">Orthodontics</a></li>
-                                            <li><a class="menu-item" href="services.html">All Services</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="dentists.html">Dentists</a></li>
-                                    <li><a class="menu-item" href="#">Pages</a>
-                                        <ul>
-                                            <li><a class="menu-item" href="about.html">About Us</a></li>
-                                            <li><a class="menu-item" href="faq.html">FAQ</a></li>
-                                            <li><a class="menu-item" href="gallery.html">Gallery</a></li>
-                                            <li><a class="menu-item" href="testimonials.html">Testimonials</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="blog.html">Blog</a></li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
-                                </ul>
-                                <!-- mainmenu end -->
-                            </div>
-                            <div class="de-flex-col">
-                                <div class="menu_side_area">
-                                    <a class="menu-item" href="booking.html" class="btn-main fx-slide"><span>Book Appointment</span></a>
-                                    <span id="menu-btn"></span>
-                                </div>
+            <div class="row">
+                <div class="col-md-12">
+                <div class="de-flex sm-pt10">
+                    <div class="de-flex-col">
+                    <!-- logo begin -->
+                    <div id="logo">
+                        <a href="index.html">
+                        <img
+                            class="logo-main"
+                            src="images/logo-black.webp"
+                            alt=""
+                        />
+                        <img
+                            class="logo-scroll"
+                            src="images/logo-black.webp"
+                            alt=""
+                        />
+                        <img
+                            class="logo-mobile"
+                            src="images/logo-black.webp"
+                            alt=""
+                        />
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    </div>
+                    <div class="de-flex-col header-col-mid">
+                    <!-- mainemenu begin -->
+                    <ul id="mainmenu">
+                        <li>
+                        <a class="menu-item" href="index.html" data-i18n="home"
+                            >Home</a
+                        >
+                        </li>
+                        <li>
+                        <a
+                            class="menu-item"
+                            href="services.html"
+                            data-i18n="services"
+                            >Services</a
+                        >
+                        <ul>
+                            <!-- <li><a class="menu-item" href="service-general-dentistry.html" data-i18n="general">General Dentistry</a></li> -->
+                            <li>
+                            <a
+                                class="menu-item"
+                                href="service-cosmetic-dentistry.html"
+                                data-i18n="cosmetic"
+                                >Cosmetic Dentistry</a
+                            >
+                            </li>
+                            <li>
+                            <a
+                                class="menu-item"
+                                href="service-pediatric-dentistry.html"
+                                data-i18n="pediatric"
+                                >Pediatric Dentistry</a
+                            >
+                            </li>
+                            <li>
+                            <a
+                                class="menu-item"
+                                href="service-restorative-dentistry.html"
+                                data-i18n="restorative"
+                                >Restorative Dentistry</a
+                            >
+                            </li>
+                            <li>
+                            <a
+                                class="menu-item"
+                                href="service-preventive-dentistry.html"
+                                data-i18n="preventive"
+                                >Preventive Dentistry</a
+                            >
+                            </li>
+                            <li>
+                            <a
+                                class="menu-item"
+                                href="service-orthodontics.html"
+                                data-i18n="orthodontics"
+                                >Orthodontics</a
+                            >
+                            </li>
+                            <!-- <li><a class="menu-item" href="services.html" data-i18n="all_services">All Services</a></li> -->
+                        </ul>
+                        </li>
+                        <li>
+                        <a
+                            class="menu-item"
+                            href="dentists.html"
+                            data-i18n="dentists"
+                            >Dentists</a
+                        >
+                        </li>
+                        <li>
+                        <a class="menu-item" href="#" data-i18n="pages">Pages</a>
+                        <ul>
+                            <li>
+                            <a href="about.html" data-i18n="about_us">About Us</a>
+                            </li>
+                            <li><a href="faq.html" data-i18n="faq">FAQ</a></li>
+                            <li>
+                            <a href="gallery.html" data-i18n="gallery">Gallery</a>
+                            </li>
+                            <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
+                        </ul>
+                        </li>
+                        <!-- <li>
+                        <a class="menu-item" href="blog.html" data-i18n="blog"
+                            >Blog</a>
+                        </li> -->
+                        <li>
+                        <a
+                            class="menu-item"
+                            href="contact.html"
+                            data-i18n="contact"
+                            >Contact</a
+                        >
+                        </li>
+                        <li>
+                        <a
+                            class="menu-item"
+                            href="booking.html"
+                            data-i18n="book_appointment"
+                            >Book Appointment</a
+                        >
+                        </li>
+                    </ul>
+                    <!-- mainmenu end -->
+                    </div>
+                    <div class="de-flex-col">
+                    <div id="languageBtn" class="mt-1">
+                        <i class="fa-solid fa-globe fs-5 id-color"></i>
+                    </div>
+                    <div class="menu_side_area d-flex align-items-center gap-2">
+                        <div
+                        class="whats-btn fx-slide d-inline-flex justify-content-center align-items-center gap-2 whatsapp-link"
+                        >
+                        <!--btn-main-->
+                        <i class="fs-20 fa-brands fa-whatsapp id-color fs-3"></i>
+                        <!-- <span>للحجز و الاستعلام</span> -->
+                        </div>
+                        <span id="menu-btn"></span>
+                    </div>
 
                     <div id="btn-extra">
-                      <span></span>
-                      <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                  </div>
+                    </div>
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </header>
-      <!-- header end -->
+            </div>
+        </header>
+        <!-- header end -->
       <!-- content begin -->
       <div class="no-bottom no-top" id="content">
         <div id="top"></div>
@@ -479,7 +566,7 @@
                                         <li><a href="services.html">Our Services</a></li>
                                         <li><a href="gallery.html">Gallery</a></li>
                                         <li><a href="about.html">About Us</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
+                                        <!-- <li><a href="blog.html">Blog</a></li> -->
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>

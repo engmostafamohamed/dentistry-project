@@ -895,14 +895,21 @@ header.smaller.scroll-light #btn-extra span {
 #mainmenu li li:last-child {
   border-bottom: none;
 }
+html[dir="ltr"] #mainmenu li li a {
+  text-align: left;
+}
 
+/* Arabic layout */
+html[dir="rtl"] #mainmenu li li a {
+  text-align: right;
+}
 #mainmenu li li a {
   padding: 5px 15px;
   border-top: none;
   color: #606060;
   width: 100%;
   border-left: none;
-  text-align: left;
+  /* text-align: left; */
   font-weight: normal;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1);
   letter-spacing: 0;
@@ -2917,9 +2924,6 @@ footer:not(.footer-light) #form_subscribe.form-dark input[type="text"] {
   margin: 0;
   padding: 0;
   font-weight: 500;
-}
-
-.crumb {
   font-size: 16px;
   padding-top: 10px;
   margin-bottom: -50px;
@@ -2931,33 +2935,40 @@ footer:not(.footer-light) #form_subscribe.form-dark input[type="text"] {
   letter-spacing: 0;
 }
 
-html[dir=ltr] .crumb li:after {
+/* Default arrow (LTR) */
+html[dir="ltr"] .crumb li:not(:last-child)::after {
   font-family: "FontAwesome";
-  content: "\f054";
+  content: "\f054"; /* right arrow › */
   font-size: 10px;
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
   color: var(--primary-color);
 }
 
-html[dir=rtl] .crumb li:not(li.active):before {
+/* RTL — use same arrow direction (›) */
+html[dir="rtl"] .crumb li:not(:last-child)::after {
   font-family: "FontAwesome";
-  content: "\f104";
-   font-size: 10px;
-  margin: 0 10px 0 10px;
+  content: "\f053"; /* left arrow ‹ */
+  font-size: 10px;
+  margin: 0 10px;
   color: var(--primary-color);
 }
 
-[dir=rtl] .blogs-content .fa-tags{
+/* Remove mirrored arrows in RTL */
+html[dir="rtl"] .crumb li::before {
+  display: none;
+}
+
+/* Remove arrow for last item */
+.crumb li:last-child::after {
+  display: none;
+}
+
+/* RTL-specific icon fix (for .fa-tags) */
+[dir="rtl"] .blogs-content .fa-tags {
   transform: scaleX(-1);
 }
-[dir=rtl] .crumb li:after {
-  display: none;
-}
 
-.crumb li:last-child:after {
-  display: none;
-}
-
+/* Breadcrumb link styles */
 .crumb a {
   color: var(--body-font-color);
   text-decoration: none;
@@ -2972,6 +2983,7 @@ html[dir=rtl] .crumb li:not(li.active):before {
   font-weight: 600;
 }
 
+/* Dark mode hover fix */
 .de_light .crumb a:hover {
   color: #fff;
 }
