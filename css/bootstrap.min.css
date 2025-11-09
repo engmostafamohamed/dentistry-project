@@ -89,6 +89,13 @@ h6 {
 h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
+@media (max-width: 768px) {
+  .bg-blur {
+    position: relative !important;
+    margin-top: 20px;
+  }
+}
+
 @media (min-width: 1200px) {
   .h1,
   h1 {
@@ -559,7 +566,7 @@ progress {
   .container-lg,
   .container-md,
   .container-sm {
-    max-width: 1020px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
@@ -567,7 +574,7 @@ progress {
   .container-lg,
   .container-md,
   .container-sm,
-  .container-xxl {
+  .container-xl {
     max-width: 1140px;
   }
 }
@@ -579,16 +586,6 @@ progress {
   .container-xl,
   .container-xxl {
     max-width: 1320px;
-  }
-}
-@media (min-width: 1600px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1520px;
   }
 }
 .row {
@@ -4308,6 +4305,38 @@ fieldset:disabled .btn {
 .accordion-flush .accordion-item .accordion-button {
   border-radius: 0;
 }
+.crumb {
+  display: flex;
+  flex-direction: row; 
+  gap: 5px;
+}
+.crumb li::after {
+  content: "›";
+  margin: 0 5px;
+}
+
+html[dir="rtl"] .crumb li::after {
+  content: "‹"; 
+  flex-direction: row-reverse; 
+}
+.crumb li {
+  list-style: none;
+}
+
+.crumb li a {
+  text-decoration: none;
+}
+
+.crumb li.active {
+  font-weight: bold;
+}
+
+html[dir="rtl"] .crumb li {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;

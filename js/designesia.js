@@ -277,6 +277,7 @@
             items: 1,
             nav:false,
             dots:true,
+            rtl: true
          });
 
         jQuery("#item-carousel-big").owlCarousel({
@@ -534,6 +535,7 @@
 			margin:40,
 			autoplay:true,
 			autoplayTimeout:2000,
+            rtl: true,
 			responsive:{
 				1000:{
 					items:6
@@ -555,6 +557,7 @@
 			margin:25,
 			autoplay:false,
 			autoplayTimeout:0,
+             rtl: true,
 			responsive:{
 				1000:{
 					items:4
