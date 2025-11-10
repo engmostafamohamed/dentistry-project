@@ -13703,7 +13703,12 @@ img {
   header.header-mobile #mainmenu li ul.mega .menu-content {
     background: #fff;
   }
-
+  html[dir= rtl] header.header-light.header-mobile #mainmenu li ul li a.menu-item {
+    text-align: right;
+  }
+  html[dir= ltr] header.header-light.header-mobile #mainmenu li ul li a.menu-item {
+    text-align: left;
+  }
   header.header-light.header-mobile #mainmenu li,
   header.header-light.header-mobile #mainmenu li ul li a.menu-item {
     border-color: #eee;
@@ -14762,7 +14767,7 @@ img {
 .half-fluid .image {
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 600px;
   height: 100%;
 }
 
