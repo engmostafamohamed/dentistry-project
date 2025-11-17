@@ -22,6 +22,11 @@
     <!-- <link rel="stylesheet" href="./fonts/icofont/icofont.min.css"> -->
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+   <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
 </head>
 
@@ -122,7 +127,7 @@
                     <div class="row">
                       <!-- Image -->
                       <div class="col-lg-6 position-lg-absolute right-half h-100">
-                        <div class="image" data-bgimage="url(images/misc/s1.webp) center"></div>
+                        <div class="headImage" data-bgimage="url(images/misc/s1.webp) center"></div>
                       </div>
                       <!-- Text -->
                       <div class="col-lg-6">
@@ -194,6 +199,167 @@
                     </div>
                 </div>
             </section>
+            <section class="bg-color-op-1" style="padding: 50px 0px;">
+                <div class="container">
+                    <div class="d-flex justify-content-center align-items-center w-50 mx-auto section-heading ">
+                        <div class="text-center">
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-i18n="offer">Offers</h2>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="owl-carousel owl-theme wow fadeInUp four-cols-center-dots text-center">
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/1.webp">
+                                            <div>Michael S.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">"I’ve always been nervous about dental
+                                            visits, but the staff made me feel completely comfortable. Their gentle care
+                                            and attention to detail truly stand out."
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/2.webp">
+                                            <div>Robert L.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">"My family and I have been coming here for
+                                            years. The service is exceptional, and the team always goes the extra mile
+                                            to make sure we’re happy and well taken care of."
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/3.webp">
+                                            <div>Jake M.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">"I came in for a whitening treatment and
+                                            left with a brand new level of confidence. The results were amazing, and the
+                                            staff made it such a relaxing experience."
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/4.webp">
+                                            <div>Alex P.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">""They’re professional, friendly, and
+                                            genuinely care about your dental health. I trust them completely and
+                                            recommend them to anyone looking for great care."
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/5.webp">
+                                            <div>Carlos R.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">"Hands down the best dental experience I’ve
+                                            ever had. Everything from scheduling to treatment was smooth, comfortable,
+                                            and handled with a personal touch."
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/6.webp">
+                                            <div>Edward B.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">"I’ve never felt more comfortable at a
+                                            dentist’s office. The team is so kind, professional, and thorough. They
+                                            always explain everything in detail, and I leave with a smile every time!"
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/7.webp">
+                                            <div>Daniel H.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">
+                                            "My experience here has been wonderful! The
+                                            staff is friendly, the office is spotless, and the care is top-notch. I
+                                            always feel relaxed, and my teeth have never looked better!"
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gradient-white-top p-40 py-4 rounded-1">
+                                    <blockquote>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <div class="de_testi_by">
+                                            <img class="circle" alt="" src="images/testimonial/8.webp">
+                                            <div>Bryan G.<span>Customer</span></div>
+                                        </div> -->
+                                        <p class="mt-4 mb-0 text-dark op-6">"From the moment I walked in, I felt at
+                                            ease. The staff made me feel like family, and the care I received was
+                                            exceptional. I’m so happy with my smile—thank you for everything!"
+                                        </p>
+                                        <button class="btn-main fx-slide btn-line" style="margin-top: 20px;" type="button" onclick="openOfferPopup()">
+                                            <span data-i18n="request_offer"></span>
+                                        </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section>
                 <div class="container">
@@ -258,7 +424,7 @@
                     </div>
 
                     <div class="row g-4">
-                        <div class="col-lg-3 col-sm-6">
+                        <!-- <div class="col-lg-3 col-sm-6">
                             <div class="hover">
                                 <div class="bg-white h-100 p-40 rounded-1">
                                     <img src="images/icons/tooth-1.png" class="w-70px mb-3 wow scaleIn" alt="">
@@ -272,7 +438,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-lg-3 col-sm-6">
                             <div class="hover">
@@ -594,7 +760,7 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/1.webp">
                                             <div>Michael S.<span>Customer</span></div>
@@ -609,7 +775,7 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/2.webp">
                                             <div>Robert L.<span>Customer</span></div>
@@ -623,7 +789,7 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/3.webp">
                                             <div>Jake M.<span>Customer</span></div>
@@ -637,7 +803,7 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/4.webp">
                                             <div>Alex P.<span>Customer</span></div>
@@ -651,7 +817,7 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/5.webp">
                                             <div>Carlos R.<span>Customer</span></div>
@@ -665,7 +831,7 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/6.webp">
                                             <div>Edward B.<span>Customer</span></div>
@@ -680,21 +846,23 @@
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/7.webp">
                                             <div>Daniel H.<span>Customer</span></div>
                                         </div>
-                                        <p class="mt-4 mb-0 text-dark op-6">"My experience here has been wonderful! The
+                                        <p class="mt-4 mb-0 text-dark op-6">
+                                            "My experience here has been wonderful! The
                                             staff is friendly, the office is spotless, and the care is top-notch. I
-                                            always feel relaxed, and my teeth have never looked better!"</p>
+                                            always feel relaxed, and my teeth have never looked better!"
+                                        </p>
                                     </blockquote>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="gradient-white-top p-40 py-4 rounded-1">
                                     <blockquote>
-                                        <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i>
+                                        <!-- <i class="fs-32 absolute start-0 mt-2 p-0 id-color fa-solid fa-quote-left"></i> -->
                                         <div class="de_testi_by">
                                             <img class="circle" alt="" src="images/testimonial/8.webp">
                                             <div>Bryan G.<span>Customer</span></div>
@@ -866,15 +1034,199 @@
         </a>
     </div>
 
-    <!-- Javascript Files
-    ================================================== -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Floating Offer Button -->
+    <div id="offer-btn" class="show-on-scroll">
+    <a href="#offerModal" onclick="openOfferPopup()" title="Offer">
+        <span class="offer-text" data-i18n="offer">العروض</span>
+    </a>
+    </div>
+
+
+    
+    <!-- Offer Popup Modal -->
+    <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-3 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="offerModalLabel" data-i18n="book_your_appointment">Schedule an Offer</h5>
+                <button type="button" class="btn-close btn-close-white" style="margin: 0;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="bookingForm" id="booking_form" method="post" action="#">
+                    
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <h3 class="mb-3"  data-i18n="book_your_appointment"><i class="fa-solid fa-envelope id-color me-2"></i> Book Your Appointment</h3>
+                            <p  data-i18n="book_your_appointment_description">Book your appointment today for expert dental care tailored to your needs. Healthy, beautiful smiles start with a simple step, schedule now!</p>
+                            <div class="relative">
+                                <select name="service" id="service" class="form-control">
+                                    <option disabled selected value data-i18n="select_service">Select Service</option>
+                                    <option value="General Dentistry">General Dentistry</option>
+                                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                    <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                                    <option value="Restorative Dentistry">Restorative Dentistry</option>
+                                    <option value="Preventive Dentistry">Preventive Dentistry</option>
+                                    <option value="Orthodontics">Orthodontics</option>
+                                </select>
+                                <i class="absolute top-0 id-color pt-3 pe-3 fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div id="date" class="relative input-group date" data-date-format="mm-dd-yyyy">
+                                <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-calendar"></i>
+                                <input class="form-control" data-i18n="select_date" placeholder="Select Date" value="" name="date" type="text" id="appointmentDate" required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </div>
+   
+
+                        <div class="col-lg-6">
+                            <div class="relative">
+                                <select name="time" id="time" class="form-control required >
+                                    <option disabled selected value data-i18n="select_time">Select Time</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                </select>
+                                <i class="absolute top-0 id-color pt-3 pe-3 fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <input type="text" name="name" id="name" data-i18n="name" placeholder="Name" class="form-control" required>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <input type="text" name="phone" id="phone" data-i18n="phone" placeholder="Phone" class="form-control" required>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <textarea name="message" id="message" data-i18n="message" class="form-control" placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="text-end">
+                            <!-- Cancel button -->
+                            <!-- <button type="button" class="btn btn-secondary me-2" data-i18n="cancel" data-bs-dismiss="modal">Cancel</button> -->
+
+                            <!-- <button type="button" class="btn-secondary fx-slide btn-line" data-bs-dismiss="modal">
+                                <span data-i18n="cancel">Cancel</span>
+                            </button> -->
+
+                            <!-- Submit button -->
+                            <!-- <button type="submit" class="btn btn-primary" data-i18n="submit">Submit</button> -->
+                            <button class="btn-main fx-slide btn-line"  type="submit" >
+                                <span data-i18n="submit"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="error_message" class="error">
+                        Sorry there was an error sending your form.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
     <script src="js/custom-marquee.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/validation-booking.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/script.js"></script>
+
+    <!-- datepicker begin -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#date input.form-control", {
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+                minDate: "today"
+            });
+        });
+    </script>
+    <!-- datepicker close -->
+
+    <script>
+        $(document).ready(function () {
+            // Destroy any previous instance first (in case designesia.js re-initialized it)
+            $(".owl-carousel").trigger('destroy.owl.carousel');
+
+            // Initialize again with autoplay
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 25,
+                autoplay: true,
+                autoplayTimeout: 2000,  // Move every 2 seconds
+                autoplayHoverPause: false,
+                rtl: true,
+                smartSpeed: 800,
+                dots: true,
+                responsive: {
+                0:    { items: 1 },
+                768:  { items: 2 },
+                1200: { items: 3 }
+                }
+            });
+        });
+
+
+        // Open popup when button clicked
+        function openOfferPopup() {
+        var modal = new bootstrap.Modal(document.getElementById('offerModal'));
+        modal.show();
+        }
+
+        // Handle form submission
+        document.getElementById("offerForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form refresh
+
+        // Hide modal
+        var modal = bootstrap.Modal.getInstance(document.getElementById('offerModal'));
+        modal.hide();
+
+        // Show SweetAlert success message
+        Swal.fire({
+            icon: 'success',
+            title: 'Data Sent Successfully!',
+            text: 'Your offer details have been submitted successfully.',
+            showConfirmButton: false,
+            timer: 2000
+        });
+
+        // Reset form after submit
+        this.reset();
+        });
+    </script>
 </body>
 
 </html>
