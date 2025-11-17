@@ -237,7 +237,15 @@ const translations = {
         location_value:"100 S Main St, New York, NY",
         call_us_title:"Call Us Directly",
         email_title:"Call Us Directly",
-        email_value:"",
+        request_service: "Request Service",
+        request_offer: "Request Offer",
+        offer:"Offers",
+        select_date:"Select Date",
+        select_time:"Select Time",
+        submit:"Submit",  
+        cancel:"Cancel",   
+
+
     },
     ar: {
         home: "الرئيسية",
@@ -297,7 +305,7 @@ const translations = {
         description_offer_seven: "قم بتقويم أسنانك بسرية باستخدام التقويم الشفاف دون الحاجة إلى الأسلاك أو الحاصرات المعدنية.",
         title_offer_eight: "تيجان خالية من المعدن",
         description_offer_eight: "استبدل الأسنان التالفة بتيجان خزفية بالكامل تمتزج بسلاسة مع ابتسامتك.",
-
+        offer:"العروض",
         restorative_description: "إصلاح وترميم أسنانك لراحة ووظيفة دائمة, والمزيد",
         read_more: "اقرأ المزيد",
         view_all_services: "عرض جميع الخدمات",
@@ -467,9 +475,13 @@ const translations = {
         location_title: "موقع العيادة",
         call_us_title: "اتصل بنا مباشرة",
         email_title: "راسلنا عبر البريد الإلكتروني",
-        our_dentists: "أطباء الأسنان"
-        
-    
+        our_dentists: "أطباء الأسنان",
+        request_service: "طلب الخدمة",    
+        request_offer: "طلب العرض",
+        select_date:"اختار اليوم",
+        select_time:"اختار الوقت",
+        submit:"حجز",  
+        cancel:"إلغاء",   
     }
 };
 
@@ -526,6 +538,7 @@ languageBtn.addEventListener('click', (e) => {
     localStorage.setItem('direction', dir);
     updateTranslations();
 });
+
 
 
 // Set default language to Arabic on first load

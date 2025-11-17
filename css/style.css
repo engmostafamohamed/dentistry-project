@@ -134,7 +134,11 @@ Table of content:
   --btn-text-decoration: none;
   --btn-text-transform: none;
 }
-
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+}
 /* base background color */
 .bg-color {
   background: var(--primary-color);
@@ -1253,6 +1257,20 @@ header.header-light #btn-extra span {
 
 [dir=ltr] #btn-close {
   right: 50px;
+}
+
+.btn-main {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-main:hover {
+  background-color: #0056b3;
 }
 
 #btn-close span {
@@ -5094,9 +5112,7 @@ html[dir=rtl] .accordion-section-title:before {
   color: rgba(255, 255, 255, 0.5);
 }
 
-[dir=ltr] #what-up {
-  left: 50px;
-}
+
 
 .rtl .de_tab.tab_simple .de_nav li span {
   margin-right: 0px;
@@ -10498,6 +10514,9 @@ p.slider-teaser {
   display: flex;
   align-items: center;
 }
+[dir=ltr] #what-up {
+  left: 50px;
+}
 #what-up {
   position: fixed;
   bottom: 120px;
@@ -10545,6 +10564,62 @@ p.slider-teaser {
   left: 20px;
   z-index: 10000;
 }
+
+/* Floating Offer Button (right side) */
+#offer-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 10000;
+}
+
+#offer-btn a {
+  background: #e63946; /* red color */
+  color: #fff;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+  transition: all 0.3s ease;
+  animation: pulseOffer 1.5s infinite; /* animated pulse */
+}
+
+/* Text inside the circle */
+#offer-btn .offer-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  direction: rtl;
+}
+
+/* Hover effect */
+#offer-btn a:hover {
+  background: #c71f2f;
+  transform: scale(1.1);
+}
+
+/* Pulse animation for offer button */
+@keyframes pulseOffer {
+  0% {
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(230, 57, 70, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+  }
+}
+
 
 #purchase-now a {
   color: #ffffff;
@@ -13703,7 +13778,12 @@ img {
   header.header-mobile #mainmenu li ul.mega .menu-content {
     background: #fff;
   }
-
+  html[dir= rtl] header.header-light.header-mobile #mainmenu li ul li a.menu-item {
+    text-align: right;
+  }
+  html[dir= ltr] header.header-light.header-mobile #mainmenu li ul li a.menu-item {
+    text-align: left;
+  }
   header.header-light.header-mobile #mainmenu li,
   header.header-light.header-mobile #mainmenu li ul li a.menu-item {
     border-color: #eee;
@@ -13767,9 +13847,9 @@ img {
     border-bottom: none;
   }
 
-  header.header-mobile #mainmenu li a {
+  /* header.header-mobile #mainmenu li a {
     color: #ffffff;
-  }
+  } */
 
   .dark-scheme header.header-mobile #mainmenu li a.menu-item {
     color: #ffffff;
@@ -14762,8 +14842,12 @@ img {
 .half-fluid .image {
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 300px;
   height: 100%;
+}
+
+.headImage {
+  min-height: 700px !important;
 }
 
 @media (min-width: 992px) {
